@@ -1,62 +1,44 @@
-/**
- * About component
- *
- * Space for you to describe more about yourself.
- */
-
-import React from "react";
-
-/**
- * About background image
- *
- * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
- * represents what you see in that image.
- *
- * Need an image? Check out https://unsplash.com to download a image you
- * freely use on your site.
- */
+import React, { useState } from "react";
 import image from "../images/motion-background.jpg";
 
 const imageAltText = "purple and blue abstract background";
 
-/**
- * Sort description that expands on your title on the Home component.
- */
 const description =
-" Hi, I am a passionate Computer Science and Engineering student at Amrita Vishwa Vidyapeetam, Chennai, with a strong interest in web development, data structures, algorithms, and backend development. I enjoy exploring new technologies and solving challenges to build efficient, scalable, and impactful software solutions.";
+  "Hi, I am a passionate Computer Science and Engineering student at Amrita Vishwa Vidyapeetam, Chennai, with a strong interest in web development, data structures, algorithms, and backend development. I enjoy exploring new technologies and solving challenges to build efficient, scalable, and impactful software solutions.";
 
-/**
- * List of some of skills or technologies you work on, are learning,
- * passionate about, or enjoy,
- */
 const skillsList = [
   "Web design (MERN)",
   "Project Management",
   "Data Structures & Algorithms",
   "C/C++/Java/Python",
   "Time Management",
-  "Leardership/ Team Work",
+  "Leadership/Team Work",
 ];
 
-/**
- * Use this to give more information about what you are passionate about,
- * how you best work, or even a quote. This will help someone learn more
- * about you on a professional level.
- */
 const detailOrQuote =
   "My focus is on continuous learning and building applications that enhance user experiences and drive real-world impact.";
+
 const About = () => {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <section className="padding" id="about">
       <img className="background" src={image} alt={imageAltText} />
       <div
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
         style={{
-          backgroundColor: "white",
+          backgroundColor: hovered ? "white" : "white",
+          transform: hovered ? "scale(1.05)" : "scale(1)", 
+          transition: "transform 0.3s, background-color 0.3s", 
           width: "50%",
           padding: "4rem",
           margin: "3rem auto",
           textAlign: "center",
+          borderRadius: "8px",
+          boxShadow: hovered
+            ? "0 6px 12px rgba(0, 0, 0, 0.2]])"
+            : "0 4px 8px rgba(0, 0, 0, 0.1)", 
         }}
       >
         <h2>About Myself</h2>

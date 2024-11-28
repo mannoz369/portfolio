@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import image from "../images/education.jpg";
 
 const imageAltText = "education background";
-/**
- * Education Component
- *
- * Displays a roadmap-style timeline of your educational history.
- */
+
+
 const Education = () => {
+  const [hoveredCard, setHoveredCard] = useState(null);
+
   const educationList = [
     {
       degree: "B.Tech Computer Science & Engineering",
@@ -25,27 +24,26 @@ const Education = () => {
     },
     {
       degree: "Secondary School (General Studies)",
-      institution:"DR.KKR Gowtham International School",
+      institution: "DR.KKR Gowtham International School",
       year: "2019- 2020",
       score: "89%",
-      description: "Completed secondary school education with a CBSE broad curriculum, including science, mathematics,English & other subjects.",
-    }, 
+      description: "Completed secondary school education with a CBSE broad curriculum, including science, mathematics, English & other subjects.",
+    },
   ];
 
   return (
     <section className="" id="education">
-        <img className="background" src={image} alt={imageAltText} />
+      <img className="background" src={image} alt={imageAltText} />
       <div
         style={{
-          width: "100%", // Full width
-          margin: "0 auto", // Center align
-          padding: "4rem", // Padding for the section
-         // Light background for the section
+          width: "100%",
+          margin: "0 auto",
+          padding: "4rem",
           borderRadius: "8px",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
         }}
       >
-        <h2 style={{ textAlign: "center", marginBottom: "2rem", marginRight: "9rem"}}>Education</h2>
+        <h2 style={{ textAlign: "center", marginBottom: "2rem", marginRight: "9rem" }}>Education</h2>
         <ul
           style={{
             listStyleType: "none",
@@ -63,17 +61,20 @@ const Education = () => {
               }}
             >
               <div
+                onMouseEnter={() => setHoveredCard(index)}
+                onMouseLeave={() => setHoveredCard(null)}
                 style={{
                   width: "75%",
                   marginLeft: "6rem",
-                  
-                  backgroundColor: "#fff",
+                  backgroundColor: hoveredCard === index ? "#fff" : "#fff", 
+                  transform: hoveredCard === index ? "scale(1.05)" : "scale(1)", 
+                  transition: "transform 0.3s, background-color 0.3s", 
                   padding: "1rem",
                   borderRadius: "8px",
                   boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                  fontFamily: "'Arial', sans-serif", // Ensure font is consistent
-                  fontSize: "1rem", // Adjust font size for consistency
-                  color: "#333", // Dark text for readability
+                  fontFamily: "'Arial', sans-serif",
+                  fontSize: "1rem",
+                  color: "#333",
                 }}
               >
                 <h3>{edu.degree}</h3>
