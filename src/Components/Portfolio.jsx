@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import image from "../images/design-desk.jpeg"; // Desk image
 import '../styles.css'; // Ensure this is properly linked to your CSS for animation
-
+import gitHubIcon from "../images/socials/github.svg";
 const imageAltText = "desktop with books and laptop";
+
 
 // Project list
 const projectList = [
@@ -67,7 +68,8 @@ const Portfolio = () => {
   }, [hasAnimated]); // The effect will run when `hasAnimated` changes
 
   return (
-    <section className="padding" id="portfolio">
+    <section className="padding" id="portfolio" style={{ backgroundColor: "#f7f7f7" }}>
+      
       <h2 style={{ textAlign: "center" }}>Portfolio</h2>
       <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem"}}>
         <div style={{ maxWidth: "40%", alignSelf: "center"}}>
@@ -86,19 +88,26 @@ const Portfolio = () => {
             }}
           />
         </div>
+        
         <div className="container">
+          
           {projectList.map((project) => (
             <div className="box" key={project.title}>
               <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
+                <h3 className="costum" style={{ flexBasis: "40px" }}>{project.title}</h3>
               </a>
-              <p className="small">{project.description}</p>
+              <p className="costum">{project.description}</p>
             </div>
           ))}
         </div>
+        
+      </div>
+      <div style={{textAlign: "center"}}><p className="costum1">Click on the title to view the project</p>
       </div>
     </section>
   );
+    
+
 };
 
 export default Portfolio;
