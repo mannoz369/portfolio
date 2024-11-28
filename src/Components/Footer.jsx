@@ -48,11 +48,14 @@ const Footer = (props) => {
         flexDirection: "column",
         alignItems: "center",
         gap: "2.5rem",
-        padding: "5rem 0 3rem",
+        padding: "0.5rem 0 3rem",
         backgroundColor: primaryColor,
         width: "100vw"
       }}
     >
+      <p style={{ color: "white", fontSize: "1.2rem", marginBottom: "0.5rem" }}>
+        Reach me out
+      </p>
       <div
         style={{
           display: "flex",
