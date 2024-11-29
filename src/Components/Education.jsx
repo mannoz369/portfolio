@@ -16,14 +16,14 @@ const Education = () => {
       description: "Currently pursuing a degree in Computer Science and Engineering, focusing on web development, data structures, and backend technologies.",
     },
     {
-      degree: "High School (Science)",
+      degree: "High School (CBSE - Science)",
       institution: "Dr.KKR Happy Valley School",
       year: "2020 - 2022",
       score: "89%",
       description: "Completed high school with a focus on science subjects, particularly mathematics, physics & chemistry building a solid foundation for engineering studies.",
     },
     {
-      degree: "Secondary School (General Studies)",
+      degree: "Secondary School (CBSE - General Studies)",
       institution: "DR.KKR Gowtham International School",
       year: "2019- 2020",
       score: "89%",

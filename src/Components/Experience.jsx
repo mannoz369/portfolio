@@ -7,25 +7,25 @@ const Work = () => {
   const workExperience = [
     {
       role: "Web Developer Intern",
-      company: "South Central Railway",
-      year: "2023",
+      company: "Indian Railways",
+      year: "2024",
       description:
-        "Developed a hospital appointment booking system with an admin interface for managing appointments.",
+        "Assisted in optimizing the efficiency of their existing payroll system and successfully developed a client-focused website to enhance operational effectiveness.",
     },
-    {
-      role: "Backend Development Intern",
-      company: "XYZ Company",
-      year: "2022",
-      description:
-        "Worked on improving the efficiency of the company's existing APIs and database management systems.",
-    },
-    {
-      role: "Freelance Web Developer",
-      company: "Freelance Projects",
-      year: "2021",
-      description:
-        "Created dynamic websites for clients, focusing on responsive design and efficient backend integration.",
-    },
+    // {
+    //   role: "Backend Development Intern",
+    //   company: "XYZ Company",
+    //   year: "2022",
+    //   description:
+    //     "Worked on improving the efficiency of the company's existing APIs and database management systems.",
+    // },
+    // {
+    //   role: "Freelance Web Developer",
+    //   company: "Freelance Projects",
+    //   year: "2021",
+    //   description:
+    //     "Created dynamic websites for clients, focusing on responsive design and efficient backend integration.",
+    // },
   ];
 
   const [visibleCards, setVisibleCards] = useState([]);
@@ -128,7 +128,7 @@ const Work = () => {
             >
               <h3>{work.role}</h3>
               <p style={{ fontWeight: "bold" }}>{work.company}</p>
-              <p>{work.year}</p>
+              <p style={{ fontWeight: "bold" }}>{work.year}</p>
               <p style={{ color: "#666" }}>{work.description}</p>
             </div>
           </div>
@@ -180,7 +180,8 @@ const Work = () => {
               marginLeft: "15rem",
             }}
           >
-            <h3>Looking for Internship</h3>
+            <h3 style={{ fontWeight: "bold" }}>Currently</h3>
+            <h3>Looking For Internship</h3>
             <p style={{ color: "#666" }}>
               Excited to contribute my skills to innovative projects!
             </p>

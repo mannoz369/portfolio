@@ -17,19 +17,19 @@ const projectList = [
     title: "MRS",
     description:
       "Developed a music recommendation system integrating facial emotion recognition with the Spotify API to suggest mood-based songs to enhance user experience.",
-    url: "",
+    url: "https://github.com/mannoz369",
   },
   {
     title: "Hospital Management",
     description:
       "Created a hospital management system with an appointment booking feature and an admin interface for managing daily appointments, improving operational efficiency and patient experience.",
-    url: "",
+    url: "https://github.com/mannoz369",
   },
   {
     title: "Food Ordering System",
     description:
       "Developed an online food ordering system for a college canteen, enabling students to browse the menu, place orders, and make payments seamlessly.",
-    url: "",
+    url: "https://github.com/mannoz369",
   },
 ];
 
@@ -68,7 +68,7 @@ const Portfolio = () => {
   }, [hasAnimated]); // The effect will run when `hasAnimated` changes
 
   return (
-    <section className="padding" id="portfolio" style={{ backgroundColor: "#f7f7f7" }}>
+    <section className="padding" id="portfolio" style={{ backgroundColor: "#E8E7EB" }}>
       
       <h2 style={{ textAlign: "center" }}>Portfolio</h2>
       <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem"}}>
